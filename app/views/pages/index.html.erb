@@ -1,0 +1,7 @@
+<h1>Hello There!</h1>
+
+<%= button_to "New Issue", :action => "new_issue" %>
+
+<% @users.each do |user| %>
+	<p><%= user.login %></p>
+<% end %>
