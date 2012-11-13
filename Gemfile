@@ -7,7 +7,7 @@ gem 'rails', '3.2.8'
 
 gem 'pg'
 gem 'octokit'
-gem 'oauth2'
+gem 'omniauth-github'
 
 
 # Gems used only for assets and not required
