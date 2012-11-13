@@ -4,7 +4,7 @@
   Welcome <%= current_user.name %>!
   <%= link_to "Sign Out", signout_path %>
 <% else %>
-  <%= link_to "Sign in with Twitter", "https://github.com/login/oauth/authorize" %>
+  <%= link_to "Sign in with Github", "/auth/github" %>
 <% end %>
 
 <%= button_to "New Issue", :action => "new_issue" %>
