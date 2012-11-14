@@ -1,3 +1,3 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :github, 'da402e32b814f1a08699', '1134a59bd074fed2e6b39ebdf42347eb79aaf3e4'
+  provider :github, '1fe1b80e32a0e637f364', 'b847735649e2eabfb5b32c41df99efbad653c634', scope: "repo"
 end

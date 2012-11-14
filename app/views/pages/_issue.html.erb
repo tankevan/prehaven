@@ -1,0 +1,5 @@
+<p>
+	<%= issue.title %>
+	<%= button_to "Close Issue", close_issue_path(:issue_no => issue.number, :repo => :repo_pass) %>
+
+</p>

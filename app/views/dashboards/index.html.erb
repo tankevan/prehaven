@@ -1,0 +1,19 @@
+<h1>Hello There!</h1>
+
+<% if current_user %>
+  Welcome <%= current_user.name%>!
+  <%= link_to "Sign Out", signout_path %>
+<% else %>
+  <%= link_to "Sign in with Github", "/auth/github" %>
+<% end %>
+
+<%= button_to "New Issue", issues_path %>
+<%= button_to "Close Issue", close_issue_path %>
+
+<%= form_tag(:controller => "dashboards", :action => "index") do %>
+	<%= label_tag(:repo, "Repository") %>
+	<%= text_field_tag(:repo) %>
+	<%= submit_tag("Get Issues") %>
+<% end %>
+
+<%= render :partial => "issue", :collection => @issues, :locals => {:repo_pass => @repo} %>

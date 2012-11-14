@@ -1,9 +1,12 @@
 Prehaven::Application.routes.draw do
-  root :to => "pages#index"
+  resource 'issues'
 
-  match '/new_issue' => 'pages#new_issue'
+  match '/dashboard' => 'dashboards#index', :as => :dashboards
+  match '/close_issue' => "issues#destroy", :as => :close_issue
+
+  root :to => "pages#index"
   
-  match "/auth/github/callback" => "session#create"
+  match "/auth/github/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
   
   # The priority is based upon order of creation:

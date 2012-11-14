@@ -1,15 +1,3 @@
 <h1>Hello There!</h1>
 
-<% if current_user %>
-  Welcome <%= current_user.name %>!
-  <%= link_to "Sign Out", signout_path %>
-<% else %>
-  <%= link_to "Sign in with Github", "/auth/github" %>
-<% end %>
-
-<%= button_to "New Issue", :action => "new_issue" %>
-
-<% @users.each do |user| %>
-	<p><%= user.login %></p>
-<% end %>
-
+<%= link_to "Sign in with Github", "/auth/github" %>
